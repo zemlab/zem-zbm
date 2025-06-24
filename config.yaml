@@ -1,0 +1,9 @@
+Global:
+  ManageImages: true
+  InitCPIO: true
+EFI:
+  Enable: true
+Componenets:
+  Enable: true
+Kernel:
+  CommandLine: "ro quiet loglevel=0 ip=:::::eth0:dhcp"
