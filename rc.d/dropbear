@@ -1,0 +1,15 @@
+#!/bin/sh
+
+[ -d /build/dropbear ] || exit 0
+
+if [ -d /etc/dropbear ] && [ ! -L /etc/dropbear ]; then
+    if ! rmdir /etc/dropbear; then
+        echo "ERROR: failed to remove existing /etc/dropbear directory"
+        exit 1
+    fi
+fi
+
+if ! ln -Tsf /build/dropbear /etc/dropbear; then
+    echo "ERROR: failed to make /etc/dropbear symlink"
+    exit 1
+fi

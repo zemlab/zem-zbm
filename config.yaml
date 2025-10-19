@@ -1,9 +1,9 @@
 Global:
   ManageImages: true
-  InitCPIO: true
+  InitCPIO: false
 EFI:
-  Enable: true
+  Enabled: true
 Componenets:
-  Enable: true
+  Enabled: true
 Kernel:
-  CommandLine: "ro quiet loglevel=0 ip=:::::eth0:dhcp"
+  CommandLine: "ro quiet ip=enp1s0:dhcp rd.neednet=1"
